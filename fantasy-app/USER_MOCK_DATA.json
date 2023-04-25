@@ -1,0 +1,157 @@
+{
+    "first_name": "haley",
+    "last_name": "pieratt",
+    "email_address": "pieratthaley@gmail.com",
+    "leagues": [
+        {   "id": 1,
+            "name": "League 1",
+            "sport_type": "football",
+            "league_type": "dynasty", 
+            "commissioner": true, 
+            "num_league_members": 10,
+            "num_roster": {
+                "main": {
+                    "QB": 2,
+                    "WR": 2,
+                    "RB": 2,
+                    "TE": 1,
+                    "FLX": 2,
+                    "SFLX": false,
+                    "Kicker": true, 
+                    "Defense": true
+                },
+                "bench": 14,
+                "injured_reserve": {
+                    "available": true,
+                    "spots": 2
+                },
+                "taxi": {
+                    "available": true, 
+                    "spots": 2
+                },
+                "roster":{
+                    "QB":[
+                        {
+                            "id": 1,
+                            "player":{
+                                "id": 1, 
+                                "first_name": "Joe",
+                                "last_name": "Burrow",
+                                "team": "Bengals",
+                                "location": "Cincinnati"
+                            }
+                        },
+                        {}
+                    ],
+                    "WR": [
+                        {
+                            "id": 4,
+                            "player":{
+                                "first_name": "Justin",
+                                "last_name": "Jefferson",
+                                "team": "Vikings",
+                                "location": "Minnesota"
+                            }
+                        },
+                        {
+                            "id": 5, 
+                            "player": {
+                                "first_name": "Mike",
+                                "last_name": "Evans",
+                                "team": "Buccaneers",
+                                "location": "Tampa Bay"
+                            }
+                        }
+                    ],
+                    "RB": [
+                        {
+                            "id": 7,
+                            "player": {
+                                "first_name": "Austin",
+                                "last_name": "Ekeler",
+                                "team": "Chargers",
+                                "location": "Los Angeles"
+                            }
+                        },
+                        {
+                            "id": 5,
+                            "player": {
+                                "first_name": "Kenneth",
+                                "last_name": "Walker",
+                                "team": "Seahawks",
+                                "location": "Seattle"
+                            }
+                            
+                        }
+                    ],
+                    "TE": [
+                        {
+                            "id": 1,
+                            "player": {
+                                "first_name": "Travis",
+                                "last_name": "Kelce",
+                                "team": "Chiefs",
+                                "location": "Kansas City"
+                            }
+                        }
+                    ],
+                    "FLX":[
+                        {
+                            "id": 3,
+                            "player":{
+                                "first_name": "Jason",
+                                "last_name": "Waddle",
+                                "team": "Dolphins",
+                                "location": "Miami"
+                            }
+                        },
+                        {
+                            "id": 5,
+                            "player": {
+                                "first_name": "Stefon",
+                                "last_name": "Diggs",
+                                "team": "Bills",
+                                "location": "Buffalo"
+                            }
+                        }
+                    ],
+                    "SFLX": [],
+                    "Kicker":[],
+                    "Defense":[]
+                }
+            }
+        },
+        {
+            "id": 2,
+            "name": "League 2",
+            "sport_type": "football",
+            "league_type": "regular",
+            "commissioner": true, 
+            "num_league_members": 8,
+            "num_roster": {
+                "main": {
+                    "QB": 1, 
+                    "WR": 2, 
+                    "RB": 2, 
+                    "TE": 1,
+                    "FLX": 2,
+                    "SFLX": false,
+                    "Kicker": false,
+                    "Defense": false
+                },
+                "bench": 6,
+                "injured_reserve": {
+                    "available": true,
+                    "spots": 2
+                },
+                "taxi": {
+                    "available": false,
+                    "spots": 0
+                },
+                "roster":{
+
+                }
+            }
+        }
+    ]
+}

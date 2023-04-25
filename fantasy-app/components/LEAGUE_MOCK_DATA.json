@@ -1,0 +1,119 @@
+[
+    {   "id": 1,
+        "name": "League 1",
+        "sport_type": "football",
+        "league_type": "dynasty", 
+        "commissioner": true, 
+        "num_league_members": 10,
+        "members":[
+            {
+                "first_name": "Haley",
+                "last_name": "Pieratt",
+                "email_address": "pieratthaley@gmail.com"
+            },
+            {
+                "first_name": "Connor",
+                "last_name": "Pieratt",
+                "email_address": "connorpieratt@yahoo.com"
+            }
+        ],
+        "num_roster": {
+            "main": {
+                "QB": 2,
+                "WR": 2,
+                "RB": 2,
+                "TE": 1,
+                "FLX": 2,
+                "SFLX": false,
+                "Kicker": true, 
+                "Defense": true
+            },
+            "bench": 14,
+            "injured_reserve": {
+                "available": true,
+                "spots": 2
+            },
+            "taxi": {
+                "available": true, 
+                "spots": 2
+            }
+        }
+    },
+    {
+        "id": 2,
+        "name": "League 2",
+        "sport_type": "football",
+        "league_type": "regular",
+        "commissioner": true, 
+        "num_league_members": 8,
+        "members":[
+            {
+                "first_name": "haley",
+                "last_name": "pieratt",
+                "email_address": "pieratthaley@gmail.com"
+            },
+            {
+                "first_name": "connor",
+                "last_name": "pieratt",
+                "email_address": "connorpieratt@yahoo.com"
+            }
+        ],
+        "num_roster": {
+            "main": {
+                "QB": 1, 
+                "WR": 2, 
+                "RB": 2, 
+                "TE": 1,
+                "FLX": 2,
+                "SFLX": false,
+                "Kicker": false,
+                "Defense": false
+            },
+            "bench": 6,
+            "injured_reserve": {
+                "available": true,
+                "spots": 2
+            },
+            "taxi": {
+                "available": false,
+                "spots": 0
+            }
+        }
+    },
+    {
+        "id": 3,
+        "name": "League 3",
+        "sport_type": "football",
+        "league_type": "regular",
+        "commissioner": true, 
+        "num_league_members": 8,
+        "members":[
+            {
+                "first_name": "connor",
+                "last_name": "pieratt",
+                "email_address": "connorpieratt@yahoo.com"
+            }
+        ],
+        "num_roster": {
+            "main": {
+                "QB": 1, 
+                "WR": 2, 
+                "RB": 2, 
+                "TE": 1,
+                "FLX": 2,
+                "SFLX": true,
+                "Kicker": false,
+                "Defense": false
+            },
+            "bench": 6,
+            "injured_reserve": {
+                "available": true,
+                "spots": 2
+            },
+            "taxi": {
+                "available": false,
+                "spots": 0
+            }
+        }
+    }
+]
