@@ -30,6 +30,7 @@ export default function LeagueListScreen() {
 
     useEffect(() =>{
         setLeagues(userContext.user.leagues);
+        navigation.setOptions({title: 'All Leagues'});
     });
     
     function leagueList() {

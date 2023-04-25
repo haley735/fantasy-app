@@ -1,7 +1,7 @@
 import "react-native-gesture-handler";
 import Animated,{interpolate} from 'react-native-reanimated';
 import { useNavigation } from '@react-navigation/native';
-import React from "react";
+import React, { useEffect } from "react";
 import { Button, View, Text} from "react-native";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import AnalyticsScreen from "./Analytics";
@@ -12,20 +12,37 @@ import MatchUpScreen from "./MatchUpScreen";
 import data from '../LEAGUE_MOCK_DATA.json';
 
 const Tab = createBottomTabNavigator();
-console.log(data);
+// console.log(data);
 
 function LeagueDetailsScreen ({route}){
   const navigation = useNavigation();
+
   const leagueDetails = route.params;
   const leagueId = leagueDetails.id;
   const leagueObj = data.find(x => x.id === leagueId);
   const members = leagueObj.members;
-  console.log(members);
+  function memberList(){
+    return members.map((member, index) => {
+      return (<Text key={index}>{member.first_name + ' ' + member.last_name}</Text>);
+    });
+  }
+  
+  useEffect(() => {
+    navigation.setOptions({title: leagueObj.name})
+
+  }, []);
+
     return (
-      <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-        <Text>League Details Screen</Text>
-      </View>
+      <React.Fragment>
+        <View id="league-details" style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+          <Text>Team Members</Text>
+          {memberList()}
+        </View>
+      </React.Fragment>
+      
     );
+
+    
   }
 
 
@@ -58,7 +75,7 @@ export default function LeagueScreen({ route }) {
                 <Tab.Screen name="Analytics" component={AnalyticsScreen} />
             </Tab.Navigator>
 
-
+      {/* <LeagueDetailsScreen /> */}
 
     </View>
     </>

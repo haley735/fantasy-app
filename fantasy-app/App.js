@@ -36,9 +36,9 @@ export default function App() {
   return (
     <>
   
-    <NavigationContainer>
+    <NavigationContainer >
             <Stack.Navigator>
-              <Stack.Screen name="Home" component={HomeScreen} />
+              <Stack.Screen name="Home" component={HomeScreen} initialParams={{'username': user.first_name}}/>
               <Stack.Screen name="Leagues" component={LeagueListScreen} />
               <Stack.Screen name="League" component={LeagueScreen} option={{title: 'League'}}/>
             </Stack.Navigator>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   StyleSheet,
   Button,
@@ -36,6 +36,11 @@ const styles = StyleSheet.create({
 
 export default function HomeScreen({ route }) {
   const navigation = useNavigation();
+  const welcomeString = route.params.username.charAt(0).toUpperCase() + route.params.username.slice(1);
+  useEffect(() =>{
+    navigation.setOptions({title: `Hello, ${welcomeString}!`})
+  }, []);
+  console.log(route.params);
   //const user = useNavigationParam('user');
   // const welcome = useNavigationParam('welcome');
   
