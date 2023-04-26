@@ -1,0 +1,117 @@
+{
+    "data":[
+        {
+            "id": 1,
+            "user_id" : 1,
+            "player":{
+                "id": 1, 
+                "first_name": "Joe",
+                "last_name": "Burrow",
+                "team": "Bengals",
+                "location": "Cincinnati",
+                "position": "QB"
+            }
+        },
+        {
+            "id": 4,
+            "user_id": 1,
+            "player":{
+                "first_name": "Justin",
+                "last_name": "Jefferson",
+                "team": "Vikings",
+                "location": "Minnesota",
+                "position": "WR"
+            }
+        },
+        {
+            "id": 5, 
+            "user_id": 1,
+            "player": {
+                "first_name": "Mike",
+                "last_name": "Evans",
+                "team": "Buccaneers",
+                "location": "Tampa Bay",
+                "position": "WR"
+            }
+        },
+        {
+            "id": 7,
+            "user_id": 1,
+            "player": {
+                "first_name": "Austin",
+                "last_name": "Ekeler",
+                "team": "Chargers",
+                "location": "Los Angeles",
+                "position": "RB"
+            }
+        },
+        {
+            "id": 5,
+            "user_id": 1,
+            "player": {
+                "first_name": "Kenneth",
+                "last_name": "Walker",
+                "team": "Seahawks",
+                "location": "Seattle",
+                "position": "RB"
+            }
+            
+        },
+        {
+            "id": 1,
+            "user_id": 1,
+            "player": {
+                "first_name": "Travis",
+                "last_name": "Kelce",
+                "team": "Chiefs",
+                "location": "Kansas City",
+                "position": "TE"
+            }
+        },
+        {
+            "id": 3,
+            "user_id": 1,
+            "player":{
+                "first_name": "Jason",
+                "last_name": "Waddle",
+                "team": "Dolphins",
+                "location": "Miami",
+                "position": "WR"
+
+            }
+        },
+        {
+            "id": 5,
+            "user_id": 1,
+            "player": {
+                "first_name": "Stefon",
+                "last_name": "Diggs",
+                "team": "Bills",
+                "location": "Buffalo",
+                "position": "WR"
+            }
+        },
+        {
+            "id": 7, 
+            "user_id": 2, 
+            "player": {
+                "first_name": "Najee",
+                "last_name": "Harris",
+                "team": "Steelers",
+                "location": "Pittsburg",
+                "position": "RB"
+            }
+        },
+        {
+            "id": 9,
+            "user_id": 2,
+            "player":{
+                "first_name": "Brock",
+                "last_name": "Purdy",
+                "team": "49ers",
+                "location": "San Francisco",
+                "position": "QB"
+            }
+        }
+    ]
+}
