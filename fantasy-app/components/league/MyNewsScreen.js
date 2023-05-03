@@ -33,11 +33,6 @@ export default function MyNewsScreen({route}) {
       <SafeAreaView style={styles.container}>
         <View >
           <Text>My News Screen</Text>
-          <Button
-            title="test"
-            style={styles.container}
-          />
-
       </View>
       </SafeAreaView>
     
