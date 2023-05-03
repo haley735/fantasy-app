@@ -71,14 +71,13 @@ export default function LeagueScreen({ route }) {
         filtered.forEach(async (player) => {
           const res = await fetch(`https://site.web.api.espn.com/apis/common/v3/sports/football/nfl/athletes/${player.id}`);
           const playerInfo = await res.json();
-          setTimeout(5000);
           // console.log(playerInfo);
-          player.position = await playerInfo.athlete.position?.displayName || null;
-          player.positionAbbr = await playerInfo.athlete.position?.abbreviation || null;
-          player.teamAbbr = await playerInfo.athlete.team?.abbreviation || null;
-          player.teamName = await playerInfo.athlete.team?.displayName || null;
-          player.teamLogo = await playerInfo.athlete.team?.logos[0].href || null;
-          player.headshot = await playerInfo.athlete.headshot?.href || playerInfo.athlete.team?.logos[0].href;
+          player.position = playerInfo.athlete.position?.displayName || null;
+          player.positionAbbr = playerInfo.athlete.position?.abbreviation || null;
+          player.teamAbbr = playerInfo.athlete.team?.abbreviation || null;
+          player.teamName = playerInfo.athlete.team?.displayName || null;
+          player.teamLogo = playerInfo.athlete.team?.logos[0].href || null;
+          player.headshot = playerInfo.athlete.headshot?.href || playerInfo.athlete.team?.logos[0].href;
 
           // console.log(player);
           setTimeout(() => {

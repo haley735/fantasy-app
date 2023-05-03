@@ -78,13 +78,13 @@ const SinglePlayerScreen = (props) => {
 }
 
 const PlayersListCards = (props) => {
-  const handleOnPress = (event) => {
+  const handleOnPress = () => {
     props.callBack.showList(false);
     props.callBack.singlePlayerInfo([props]);
   }
 
   return (
-    <Card>
+      <Card>
           <Card.Title title={props.name} subtitle={props.teamDisplayName} />
           <Card.Content>
             <Text variant="bodyMedium">{'Position: ' + props.positionDisplayName}</Text>
@@ -113,8 +113,6 @@ const PlayersListCards = (props) => {
 };
 
 export default function PlayersListScreen({ route }) {
-  const navigation = useNavigation();
-  navigation.setOptions({title: 'Available Players'});
   const allPositions = ['WR', 'RB', 'TE', 'QB', 'FLEX', 'K', 'DEF'];
   const [showList, setShowList] = useState(true);
   const [singlePlayerInfo, setSinglePlayerInfo] = useState([]);
@@ -316,11 +314,12 @@ export default function PlayersListScreen({ route }) {
     }
 
   function filterPills(){
-    return positionsVarGrouped.map((group) => {
+    return positionsVarGrouped.map((group, index) => {
       let position = group[0];
       let positionVar = group[1];
       return (
         <Pressable
+          key={index}
           style={positionVar ? [styles.button, styles.buttonOpen] : [styles.button, styles.buttonClose]}
           onPress={() => {
             handlePositionSelection(position, positionVar);
