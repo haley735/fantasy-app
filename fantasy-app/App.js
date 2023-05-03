@@ -1,21 +1,15 @@
 import "react-native-gesture-handler";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import Animated,{interpolate} from 'react-native-reanimated';
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack/";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeScreen from "./components/HomeScreen";
-import AboutScreen from "./components/AboutScreen";
-import ContactScreen from './components/ContactScreen';
 import LeagueListScreen from "./components/LeagueListScreen";
 import LeagueScreen from "./components/league/LeagueScreen";
-import { Button } from "react-native-web";
-import { useNavigation } from '@react-navigation/native';
-import { SafeAreaView } from "react-native-safe-area-context";
 import data from './USER_MOCK_DATA.json';
-import { useContext, createContext } from "react";
+import { createContext } from "react";
 
 
 const Stack = createStackNavigator();

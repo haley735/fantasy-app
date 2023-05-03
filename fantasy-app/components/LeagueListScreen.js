@@ -6,7 +6,7 @@ import { useContext, useEffect, useState } from "react";
 import { context } from "../App";
 import { ScrollView, TextInput } from "react-native-web";
 import { Card } from 'react-native-paper';
-import { SelectList } from 'react-native-dropdown-select-list'
+import { SelectList } from 'react-native-dropdown-select-list';
 
 
 const SingleLeague = (props) =>{
