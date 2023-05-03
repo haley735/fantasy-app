@@ -10,6 +10,7 @@
             "commissioner": true, 
             "num_league_members": 10,
             "num_roster": {
+                "roster_spots": 11,
                 "main": {
                     "QB": 2,
                     "WR": 2,
@@ -118,7 +119,11 @@
                     "SFLX": [],
                     "Kicker":[],
                     "Defense":[]
-                }
+                },
+                "bench_roster":[],
+                "injured_reserve_roser":[],
+                "taxi_roster": []
+
             }
         },
         {

@@ -123,7 +123,7 @@ function LeagueDetailsScreen ({route}){
                     onPress={() => navigation.navigate("Players")} /> 
             </View>
 
-          <Text>Team Members</Text>
+          <Text>League Members</Text>
           <DataTable>
             <DataTable.Header title="League Members">
               <DataTable.Title>Standing</DataTable.Title>
@@ -146,6 +146,7 @@ export default function LeagueScreen({ route }) {
     const params = route.params;
     const leagueDetails = params.leagueObj;
     const roster = leagueDetails.num_roster.roster;
+    const rosterSpots = leagueDetails.num_roster.roster_spots;
     const benchSpots = leagueDetails.num_roster.bench;
     const benchRoster = leagueDetails.num_roster.bench_roster;
     const injuredReserveAvailable = leagueDetails.num_roster.injured_reserve.available;
@@ -205,7 +206,7 @@ export default function LeagueScreen({ route }) {
       <Tab.Navigator initialRouteName="LeagueDetails">
           <Tab.Screen name="League Details" component={LeagueDetailsScreen} initialParams={leagueDetails} />
           <Tab.Screen name="Team" component={RosterScreen} 
-          initialParams={{roster: roster, benchSpots: benchSpots, benchRoster: benchRoster, 
+          initialParams={{roster: roster, rosterSpots: rosterSpots, benchSpots: benchSpots, benchRoster: benchRoster, 
             injuredReserveAvailable: injuredReserveAvailable, injuredReserveSpots: injuredReserveSpots, 
             injuredReserveSpots: injuredReserveSpots, injuredReserveRoster: injuredReserveRoster, 
             taxiActive: taxiActive, taxiSpots: taxiSpots, taxiRoster
