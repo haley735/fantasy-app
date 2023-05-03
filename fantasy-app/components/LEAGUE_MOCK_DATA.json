@@ -9,13 +9,13 @@
                 "id": 1,
                 "first_name": "Haley",
                 "last_name": "Pieratt",
-                "email_address": "pieratthaley@gmail.com"
+                "email_address": "email@gmail.com"
             },
             {
                 "id": 2,
                 "first_name": "Connor",
                 "last_name": "Pieratt",
-                "email_address": "connorpieratt@yahoo.com"
+                "email_address": "email@yahoo.com"
             }
         ],
         "num_roster": {

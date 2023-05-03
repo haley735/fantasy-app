@@ -1,7 +1,7 @@
 {
     "first_name": "haley",
     "last_name": "pieratt",
-    "email_address": "pieratthaley@gmail.com",
+    "email_address": "email@gmail.com",
     "leagues": [
         {   "id": 1,
             "name": "League 1",
