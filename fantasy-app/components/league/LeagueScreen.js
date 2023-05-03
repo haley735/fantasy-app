@@ -103,7 +103,7 @@ export default function LeagueScreen({ route }) {
           <Tab.Screen name="League Details" component={LeagueDetailsScreen} initialParams={leagueDetails} />
           <Tab.Screen name="Team" component={RosterScreen} initialParams={roster} />
           <Tab.Screen name="Matchup" component={MatchUpScreen} />
-          <Tab.Screen name="Players" component={PlayersListScreen} initialParams={availablePlayers}/> 
+          <Tab.Screen name="Players" component={PlayersListScreen} initialParams={availablePlayers} options={{title: "Available Players"}}/> 
           <Tab.Screen name="My News" component={MyNewsScreen} />
           <Tab.Screen name="Analytics" component={AnalyticsScreen} />
       </Tab.Navigator>
