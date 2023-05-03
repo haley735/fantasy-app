@@ -30,14 +30,18 @@ const SinglePlayerScreen = (props) => {
     <ScrollView>
       <Card>
           <Card.Title title={playerInfo.name} subtitle={playerInfo.teamDisplayName} />
-          <Card.Content>
-            <Text variant="bodyMedium">{'Position: ' + playerInfo.positionDisplayName}</Text>
-            <Text variant="bodyMedium">{'Age: ' + playerInfo.age}</Text>
-            <Text variant="bodyMedium">{'Height: ' + playerInfo.height}</Text>
-            <Text variant="bodyMedium">{'Weight: ' + playerInfo.weight}</Text>
-            <Text variant="bodyMedium">{'Experience: ' + playerInfo.experience}</Text>
-          </Card.Content>
-          <Card.Cover source={{ uri: playerInfo.photo }} />
+          <View style={{flex: 1, flexDirection: "row", justifyContent:"space-around"}}>
+          <Card.Cover style={{height: "200px", width: "200px"}} source={{ uri: playerInfo.photo }} />
+            <Card.Content>
+              <Text variant="bodyMedium">{'Position: ' + playerInfo.positionDisplayName}</Text>
+              <Text variant="bodyMedium">{'Age: ' + playerInfo.age}</Text>
+              <Text variant="bodyMedium">{'Height: ' + playerInfo.height}</Text>
+              <Text variant="bodyMedium">{'Weight: ' + playerInfo.weight}</Text>
+              <Text variant="bodyMedium">{'Experience: ' + playerInfo.experience}</Text>
+            </Card.Content>
+
+          </View>
+          
           <Card.Actions style={{flex: 1, alignSelf: "center" , justifyContent: "space-around", flexDirection: "row"}}>
             <Text>
               <Button 
