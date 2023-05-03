@@ -4,6 +4,7 @@ skeleton app for fantasy sports; starting out only supporting fantasy football
 ### Installation + Running & Notes 
 
 To run the application, install node packages, and make sure expo cli is installed as well. From there, you can run in a terminal window, `npx expo start` and choose your form of deployment whether that be web (recommended), iOS, or Android.
+More info on expo installation: https://docs.expo.dev/get-started/expo-go/
 
 This application does not currently have a backend service attached to it. The application is using mock data from JSON files to establish data objects. The JSON files are provided to run locally on a web version. The application will not work on mobile until a backend service is connected or some other type of storage soluation, maybe AsyncStorage if not worried about security just yet. 
 
