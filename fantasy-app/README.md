@@ -18,6 +18,91 @@ I had trouble getting all of the active NFL players from the api followed by ano
 Each player has their own id from the sport data api, which belongs to a user with a specific id.
 For easier sorting of who's available, keeping track of all taken players is the easiest solution to implement (most likely). However, writing to that table will require knowing the current user's id to add player info to the user's list of players taken. This will typically be done upon drafting and then as needed when modifying teams during the regular season, but it'll likely be less frequent. 
 
-### Object Structure
+### Object Structures
+For a full example, look for any files marked with `MOCK_DATA.json`. Additional restrictions around certain data types and accepted entries will be necessary and objects will most likely need to be modified to accomodate additional validation. 
 
+#### user
+When adding users to lists, the below structure is necessary and can be exanded upon
+```
+{
+  "id": 1,
+  "first_name": "Haley",
+  "last_name": "Pieratt",
+  "leagues": []
+}
+```
 
+#### leagues
+When adding leagues to lists for the respectice user, the below structure is the minimum necssary and can be expanded upon. This object is added to a user upon creating or joining a league. 
+```
+{
+  "id": 1,
+  "name": "League 1",
+  "sport_type": "football",
+  "league_type": "dynasty", 
+  "commissioner": true, 
+  "num_league_members": 10,
+  "num_roster": {
+      "roster_spots": 11,
+      "main": {
+          "QB": 2,
+          "WR": 2,
+          "RB": 2,
+          "TE": 1,
+          "FLX": 2,
+          "SFLX": false,
+          "Kicker": true, 
+          "Defense": true
+      },
+      "bench": 14,
+      "injured_reserve": {
+          "available": true,
+          "spots": 2
+      },
+      "taxi": {
+          "available": true, 
+          "spots": 2
+      },
+      "roster":{},
+      "bench_roster":[],
+      "injured_reserve_roser":[],
+      "taxi_roster": []
+}
+```
+
+#### roster position
+ When adding roster positions to lists for the respective user, the below structure is the minimum necessary and can be expanded upon. This object is added upon creating or joining a league.  
+ ```
+ "QB": [],
+ "RB": []
+ ```
+
+#### player
+When adding players to lists for the respective user, the below structure is the minimum necessary and can be expanded upon. This object is added upon drafting or updating roster throughout the season. 
+```
+{
+  "id": 5,
+  "player": {
+      "first_name": "Stefon",
+      "last_name": "Diggs",
+      "team": "Bills",
+      "location": "Buffalo"
+  }
+}
+```
+### MOCK DATA Files
+##### USER_MOCK_DATA.json
+- data file that contains an entire user object
+- will contain full league objects; can be changed to references
+##### LEAGUE_MOCK_DATA.json
+- data file that contians an entire single league object
+- will contain full league object including a list of all members
+##### PLAYERS_TAKEN_MOCK_DATA.json
+- data file that contians players taken from a single league 
+- used to keep track of players that are not available to pickup & provide filtering for the players screen
+- updated on draft and throughout the season
+##### ACTIVE_NFL_PLAYERS.json
+- data file that contians all active nfl players
+- only necessary for faster/easier filtering 
+- doesn't need to be updated much
+- a single large data store as the source of truth
