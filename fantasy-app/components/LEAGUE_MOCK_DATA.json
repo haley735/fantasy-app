@@ -3,15 +3,16 @@
         "name": "League 1",
         "sport_type": "football",
         "league_type": "dynasty", 
-        "commissioner": true, 
         "num_league_members": 10,
         "members":[
             {
+                "id": 1,
                 "first_name": "Haley",
                 "last_name": "Pieratt",
                 "email_address": "pieratthaley@gmail.com"
             },
             {
+                "id": 2,
                 "first_name": "Connor",
                 "last_name": "Pieratt",
                 "email_address": "connorpieratt@yahoo.com"
