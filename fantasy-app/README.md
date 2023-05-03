@@ -1,5 +1,5 @@
 # fantasy-app
-mvp for fantasy sports; starting out only supporting fantasy football
+skeleton app for fantasy sports; starting out only supporting fantasy football
 
 ### Installation + Running & Notes 
 
